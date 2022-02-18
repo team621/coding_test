@@ -45,4 +45,54 @@ public class Lv1 {
 		
 		return answer;
 	}
+	
+	//collatz
+	public int collatz(int num, String flag) {
+		int answer = 0;
+		if(flag.equals("my")) {
+			while (num != 1) {
+				if(num % 2 == 0) {
+					num /= 2;
+				}else if(num % 2 == 1) {
+					num = (num * 3) +1;
+				}
+				
+				if(answer >= 500) {
+					answer = -1;
+					break;
+				}else {
+					answer++;
+				}
+			}
+		}else if(flag.equals("other")) {
+			for(int i=0; i<500; i++) {
+				if(num == 1) return i;
+				num = (num %  2 == 0) ? num/2 : num*3 + 1;
+			}
+			return -1;
+		}
+		
+		return answer;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
