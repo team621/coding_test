@@ -1,5 +1,7 @@
 package coding_test;
 
+import java.util.ArrayList;
+
 public class Lv1 {
 	
 	//하샤드
@@ -75,10 +77,45 @@ public class Lv1 {
 		return answer;
 	}
 	
+	//홀짝
+	public String oddEven(int num) {
+		String answer = "";
+		
+		answer = num % 2 ==0 ? "Even" : "Odd";
+		
+		return answer;
+	}
 	
+	//제일 작은 수 제거
+	public int[] removeMin(int arr[]) {
+		int[] answer = {};
+		int min = arr[0];
+		
+		ArrayList<Integer> tempList = new ArrayList<>();
+		
+		if(arr.length <= 1) return new int[]{-1};
+
+        for(int i=0; i<arr.length; i++){
+            tempList.add(arr[i]);
+            if(min > arr[i]) min = arr[i];
+        }
+
+        int minIndex = tempList.indexOf(min);
+        tempList.remove(minIndex);
+        answer = new int[tempList.size()];
+
+        for(int i=0; i<tempList.size(); i++) answer[i] = tempList.get(i);
+		
+		return answer;
+	}
 	
-	
-	
+	//제곱근 구하기
+	public long sqrt(long n) {
+		long answer = 0;
+		double temp = Math.sqrt(n);
+		if(temp % 1 == 0) return (long) ((temp + 1) * (temp + 1));
+		else return -1;
+	}
 	
 	
 	

@@ -14,6 +14,17 @@ public class Main {
 		//System.out.println(lv1.arrAvg(arrAvgValue));
 		
 		//collatz
-		System.out.println(lv1.collatz(6, "my"));
+		//System.out.println(lv1.collatz(6, "my"));
+		
+		//홀짝 구하기
+		//System.out.println(lv1.oddEven(12812981));
+		
+		//제일 작은 수 제거
+		//int[] arr = {1,2,3,4};
+		//int[] answer = lv1.removeMin(arr);
+		//for(int a : answer) System.out.print(a + ", ");
+		
+		//제곱근 구하기
+		System.out.println(lv1.sqrt(121));
 	}
 }
