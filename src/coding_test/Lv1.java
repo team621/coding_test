@@ -1,6 +1,8 @@
 package coding_test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Lv1 {
 	
@@ -115,6 +117,36 @@ public class Lv1 {
 		double temp = Math.sqrt(n);
 		if(temp % 1 == 0) return (long) ((temp + 1) * (temp + 1));
 		else return -1;
+	}
+
+	//내림차순 배치
+	public long descSort(long n, String flag) {
+		if(flag.equals("my")) {
+			String temp = "";
+	        String[] tempArr = Long.toString(n).split("");
+	        
+	        Long[] tempLArr = new Long[tempArr.length];
+
+	        for(int i=0; i<tempArr.length; i++) tempLArr[i] = Long.parseLong(tempArr[i]);
+
+	        Arrays.sort(tempLArr, Collections.reverseOrder());
+
+	        for(int i=0; i<tempArr.length; i++) temp += Long.toString(tempLArr[i]);
+					
+			return Long.parseLong(temp);
+			
+		}else if(flag.equals("other")) {
+			String temp[] = String.valueOf(n).split("");
+			Arrays.sort(temp);
+			
+			StringBuilder sb = new StringBuilder();
+			for(String a : temp) sb.append(a);
+			
+			return Long.parseLong(sb.reverse().toString());
+		}else {
+			return -1;
+		}
+		
 	}
 	
 	

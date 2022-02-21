@@ -25,6 +25,9 @@ public class Main {
 		//for(int a : answer) System.out.print(a + ", ");
 		
 		//제곱근 구하기
-		System.out.println(lv1.sqrt(121));
+		//System.out.println(lv1.sqrt(121));
+		
+		//내림차순으로 배치
+		System.out.println(lv1.descSort(118372, "other"));
 	}
 }
