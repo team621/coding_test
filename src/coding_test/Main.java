@@ -28,6 +28,9 @@ public class Main {
 		//System.out.println(lv1.sqrt(121));
 		
 		//내림차순으로 배치
-		System.out.println(lv1.descSort(118372, "other"));
+		//System.out.println(lv1.descSort(118372, "other"));
+		
+		//최대공약수, 최소공배수
+		System.out.println(lv1.gcd(3, 12)[0] + "   " + "  " + lv1.gcd(3, 12)[1]);
 	}
 }
