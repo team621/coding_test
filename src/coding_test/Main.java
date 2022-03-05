@@ -31,6 +31,10 @@ public class Main {
 		//System.out.println(lv1.descSort(118372, "other"));
 		
 		//최대공약수, 최소공배수
-		System.out.println(lv1.gcd(3, 12)[0] + "   " + "  " + lv1.gcd(3, 12)[1]);
+		//System.out.println(lv1.gcd(3, 12)[0] + "   " + "  " + lv1.gcd(3, 12)[1]);
+		
+		int[] answer = lv1.reverseArr(12345);
+		for(int a : answer) System.out.print(a+ " ,");
+		
 	}
 }

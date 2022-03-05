@@ -167,7 +167,24 @@ public class Lv1 {
 		return answer;
 	}
 	
-	
+	//배열 뒤집기
+	public int[] reverseArr(long n) {
+		int[] answer = {};
+		
+		String str = String.valueOf(n);
+		
+		StringBuilder sb = new StringBuilder(str);
+		
+		sb = sb.reverse();
+		
+		String[] strArr = sb.toString().split("");
+		
+		answer = new int[strArr.length];
+		
+		for(int i=0; i<strArr.length; i++) answer[i] = Integer.parseInt(strArr[i]);
+		
+		return answer;
+	}
 	
 	
 	
