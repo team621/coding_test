@@ -186,8 +186,30 @@ public class Lv1 {
 		return answer;
 	}
 	
+	//자릿수 더하기
+	public int sumInt(int n) {
+		int answer = 0;
+		
+		while(n>0) {
+			answer += n%10;
+			n /= 10;	
+		}
+
+		return answer;
+	}
 	
-	
+	public String scaleChange(String s) {
+		String answer = "";
+		String strArr[] = s.split(" ");
+		int cnt = 0;
+		
+		for(String ans : strArr) {
+			//여기서 짝,홀이 바뀜 그래서 아래에서 반대로 로우 업퍼 함
+			cnt = ans.equals(" ") ? 0 : cnt + 1;
+			answer += cnt % 2 == 0 ? ans.toLowerCase() : ans.toUpperCase();
+		}		
+		return answer;
+	}
 	
 	
 	

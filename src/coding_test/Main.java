@@ -33,8 +33,12 @@ public class Main {
 		//최대공약수, 최소공배수
 		//System.out.println(lv1.gcd(3, 12)[0] + "   " + "  " + lv1.gcd(3, 12)[1]);
 		
-		int[] answer = lv1.reverseArr(12345);
-		for(int a : answer) System.out.print(a+ " ,");
+		//int[] answer = lv1.reverseArr(12345);
+		//for(int a : answer) System.out.print(a+ " ,");
+		
+		//System.out.println(lv1.sumInt(123));
+		
+		System.out.println(lv1.scaleChange("try hello world"));
 		
 	}
 }
