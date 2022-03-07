@@ -38,7 +38,11 @@ public class Main {
 		
 		//System.out.println(lv1.sumInt(123));
 		
-		System.out.println(lv1.scaleChange("try hello world"));
+		//System.out.println(lv1.scaleChange("try hello world"));
+		
+		//System.out.println(lv1.aliquit(12));
+		
+		System.out.println(lv1.sizer("AB", 1));
 		
 	}
 }

@@ -3,6 +3,7 @@ package coding_test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class Lv1 {
 	
@@ -211,12 +212,32 @@ public class Lv1 {
 		return answer;
 	}
 	
+	//약수의 합
+	public int aliquit(int n) {
+		int answer = 0;
+		int m = n;
+		
+		while(m > 0) {
+			if(n%m==0) answer += m;
+			m--;
+		}
+		return answer;
+	}
 	
-	
-	
-	
-	
-	
-	
+	//시저암호
+	public String sizer(String s, int n) {
+		String answer = "";
+		
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			
+			if(Character.isLowerCase(ch)) ch = (char)((ch-'a'+n) % 26 + 'a');
+			else if(Character.isUpperCase(ch)) ch = (char)((ch-'A'+n) % 26 + 'A');
+			System.out.println(ch);
+			answer += ch;
+		}
+		
+		return answer;
+	}
 	
 }
