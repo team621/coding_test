@@ -42,7 +42,9 @@ public class Main {
 		
 		//System.out.println(lv1.aliquit(12));
 		
-		System.out.println(lv1.sizer("AB", 1));
+		//System.out.println(lv1.sizer("AB", 1));
+		
+		System.out.println(lv1.changeInt("-1234"));
 		
 	}
 }

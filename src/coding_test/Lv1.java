@@ -240,4 +240,15 @@ public class Lv1 {
 		return answer;
 	}
 	
+	//문자열 숫자 변환
+	public int changeInt(String s) {
+		int answer = 0;
+		
+		if(s.contains("+")) s.replace("+","");
+
+        answer = Integer.parseInt(s);
+				
+		return answer;
+	}
+	
 }
