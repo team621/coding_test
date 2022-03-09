@@ -251,4 +251,42 @@ public class Lv1 {
 		return answer;
 	}
 	
+	//수박수박수박수박수박
+	public String waterMelon(int n) {
+		String answer = "";
+        int count = n/2;
+
+        for(int i=0; i<count; i++){
+            answer += "수박";
+        }
+
+        if(n%2 == 1) answer += "수";
+        
+		return answer;
+	}
+	
+	//김서방
+	public String findKim(String[] seoul) {
+		int x = Arrays.asList(seoul).indexOf("Kim");
+		return "김서방은 " + x + "에 있다.";
+	}
+	
+	//문자열 다루기 기본
+	public boolean Str(String s) {
+		boolean answer = true;
+		
+        if(s.length() == 4 || s.length() == 6){
+            String ansArr[] = s.split("");
+            for(int i=0; i<ansArr.length; i++){
+                int index = ansArr[i].charAt(0);
+                if(index >= 48 && index <= 57) answer = true;
+                else {
+                	answer = false;
+                	break;
+                }
+            }
+        }else answer = false;
+		
+		return answer;
+	}
 }

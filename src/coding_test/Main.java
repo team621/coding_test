@@ -44,7 +44,14 @@ public class Main {
 		
 		//System.out.println(lv1.sizer("AB", 1));
 		
-		System.out.println(lv1.changeInt("-1234"));
+		//System.out.println(lv1.changeInt("-1234"));
+		
+		//System.out.println(lv1.waterMelon(3));
+		
+		//String[] kim = {"LEE", "Kim", "Choi"};
+		//System.out.println(lv1.findKim(kim));
+		
+		System.out.println(lv1.Str("1234"));
 		
 	}
 }
