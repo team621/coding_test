@@ -51,7 +51,9 @@ public class Main {
 		//String[] kim = {"LEE", "Kim", "Choi"};
 		//System.out.println(lv1.findKim(kim));
 		
-		System.out.println(lv1.Str("1234"));
+		//System.out.println(lv1.Str("1234"));
+		
+		System.out.println(lv1.reverseStr("asdjfkljasdfZ"));
 		
 	}
 }
