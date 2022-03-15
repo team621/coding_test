@@ -53,7 +53,9 @@ public class Main {
 		
 		//System.out.println(lv1.Str("1234"));
 		
-		System.out.println(lv1.reverseStr("asdjfkljasdfZ"));
+		//System.out.println(lv1.reverseStr("asdjfkljasdfZ"));
+		
+		System.out.println(lv1.pyCount("pPoooyY"));
 		
 	}
 }

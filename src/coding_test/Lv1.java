@@ -303,4 +303,22 @@ public class Lv1 {
         
         return answer;
 	}
+	
+	
+	//p, y 세기
+	public boolean pyCount(String s) {
+		boolean answer = false;
+        String[] arr = s.split("");
+        int pCount = 0;
+        int yCount = 0;
+        
+        for(int i=0; i<arr.length; i++){
+            if(arr[i].toLowerCase().equals("p")) pCount++;
+            if(arr[i].toLowerCase().equals("y")) yCount++;
+        }
+        
+        if(pCount == yCount) answer = true;
+        
+        return answer;
+	}
 }
