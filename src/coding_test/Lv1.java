@@ -3,6 +3,7 @@ package coding_test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class Lv1 {
@@ -320,5 +321,31 @@ public class Lv1 {
         if(pCount == yCount) answer = true;
         
         return answer;
+	}
+	
+	//문자열 내 마음대로 정렬하기
+	public String[] arrString(String[] strings, int n) {
+		String[] answer = new String[strings.length];
+		
+		ArrayList<String> array = new ArrayList<String>();
+		
+		for(int i=0; i<strings.length; i++) array.add(strings[i].charAt(n) + strings[i]);
+		
+		Collections.sort(array);
+		
+		for (int i = 0; i < array.size(); i++) answer[i] = array.get(i).substring(1);
+		
+		return answer;
+	}
+	
+	//두 정수 사이의 합
+	public long sumTwo(int a, int b) {
+		long answer = 0;
+		int big = a > b ? a : b;
+		int small = a > b ? b : a;
+		
+		for(int i=small; i<=big; i++) answer += i;
+		
+		return answer;
 	}
 }

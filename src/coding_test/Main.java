@@ -55,7 +55,12 @@ public class Main {
 		
 		//System.out.println(lv1.reverseStr("asdjfkljasdfZ"));
 		
-		System.out.println(lv1.pyCount("pPoooyY"));
+		//System.out.println(lv1.pyCount("pPoooyY"));
+		
+		//String[] arr = {"abce", "abcd", "cdx"};
+		//System.out.println(lv1.arrString(arr, 2));
+		
+		System.out.println(lv1.sumTwo(3, 5));
 		
 	}
 }
