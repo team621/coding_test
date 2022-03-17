@@ -60,7 +60,10 @@ public class Main {
 		//String[] arr = {"abce", "abcd", "cdx"};
 		//System.out.println(lv1.arrString(arr, 2));
 		
-		System.out.println(lv1.sumTwo(3, 5));
+		//System.out.println(lv1.sumTwo(3, 5));
+		
+		int[] arr = {4,4,4,3,3};	
+		System.out.println(lv1.hateSame(arr));
 		
 	}
 }

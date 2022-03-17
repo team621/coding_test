@@ -348,4 +348,25 @@ public class Lv1 {
 		
 		return answer;
 	}
+	
+	//같은숫자는 싫어
+	public int[] hateSame(int[] arr) {
+		ArrayList<Integer> list = new ArrayList<>();
+        int num = -1;
+        
+        for(int i=0; i<arr.length; i++) {
+        	if(arr[i] != num) {
+        		list.add(arr[i]);
+        		num = arr[i];
+        	}
+        }
+        
+        int[] answer = new int[list.size()];
+        
+        for(int i=0; i<list.size(); i++) answer[i] = list.get(i);
+        
+
+        return answer;
+	}
+	
 }
