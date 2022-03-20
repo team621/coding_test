@@ -65,8 +65,10 @@ public class Main {
 		//int[] arr = {4,4,4,3,3};	
 		//System.out.println(lv1.hateSame(arr));
 		
-		int[] arr = {5, 9, 7, 10};
-		System.out.println(lv1.divisor(arr, 5));
+		//int[] arr = {5, 9, 7, 10};
+		//System.out.println(lv1.divisor(arr, 5));
+		
+		System.out.println(lv1.middleStr("abcde"));
 		
 	}
 }

@@ -383,9 +383,19 @@ public class Lv1 {
         
         for(int i=0; i<answer.length; i++) answer[i] = list.get(i);
         
-        Arrays.sort(answer);
+        Arrays.sort(answer); 
         
         return answer;
+	 }
+	 
+	 //가운데 글자 가져오기
+	 public String middleStr(String s) {
+		 String answer = "";
+		 
+		 if(s.length() % 2 != 0) answer = s.substring(s.length()/2, s.length()/2+1);
+	     else answer = s.substring(s.length()/2-1, s.length()/2+1);
+		 
+		 return answer;
 	 }
 	
 }
