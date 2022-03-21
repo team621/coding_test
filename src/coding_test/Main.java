@@ -68,7 +68,8 @@ public class Main {
 		//int[] arr = {5, 9, 7, 10};
 		//System.out.println(lv1.divisor(arr, 5));
 		
-		System.out.println(lv1.middleStr("abcde"));
+		//System.out.println(lv1.middleStr("abcde"));
 		
+		System.out.println(lv1.coin(3, 20, 4));
 	}
 }

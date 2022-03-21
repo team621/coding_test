@@ -397,5 +397,19 @@ public class Lv1 {
 		 
 		 return answer;
 	 }
+	 
+	 //부족한 금액 구하기
+	 public long coin(int price, int money, int count) {
+		 long answer = money;
+
+		 for(int i=1; i<=count; i++) {
+			 answer -= price * i;
+		 }
+		 
+		 if(answer < 0) answer *= -1;
+		 else answer = 0;
+		 
+		 return answer;
+	 }
 	
 }
