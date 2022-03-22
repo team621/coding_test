@@ -70,6 +70,8 @@ public class Main {
 		
 		//System.out.println(lv1.middleStr("abcde"));
 		
-		System.out.println(lv1.coin(3, 20, 4));
+		//System.out.println(lv1.coin(3, 20, 4));
+		
+		System.out.println(lv1.one(10));
 	}
 }

@@ -411,5 +411,14 @@ public class Lv1 {
 		 
 		 return answer;
 	 }
+	 
+	 //나머지가 1이 되는 수 찾기
+	 public int one(int n) {
+		 int answer = 1;
+		 
+		 while(n % answer != 1) answer++;
+		 
+		 return answer;
+	 }
 	
 }
