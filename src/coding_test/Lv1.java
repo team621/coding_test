@@ -420,5 +420,28 @@ public class Lv1 {
 		 
 		 return answer;
 	 }
+	 
+	 //최소 직사각형
+	 public int minRec(int[][] sizes) {
+		 int row = -1;
+	        int column = -1;
+
+	        for(int i=0; i<sizes.length; i++){
+	            if(sizes[i][0] < sizes[i][1]){
+	                int temp = sizes[i][1];
+	                sizes[i][1] = sizes[i][0];
+	                sizes[i][0] = temp;
+	            }
+	        }
+
+	        for(int i=0; i<sizes.length; i++){
+	            if(row < sizes[i][0]) row = sizes[i][0];
+	            int[] tempArr = sizes[i];
+	            for(int j=1; j<tempArr.length; j++){
+	                if(column < tempArr[j]) column = tempArr[j];
+	            }
+	        }
+	        return row * column;
+	 }
 	
 }

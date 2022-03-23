@@ -72,6 +72,10 @@ public class Main {
 		
 		//System.out.println(lv1.coin(3, 20, 4));
 		
-		System.out.println(lv1.one(10));
+		//System.out.println(lv1.one(10));
+		
+		int[][] arr  = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
+		System.out.println(lv1.minRec(arr));
+		
 	}
 }
