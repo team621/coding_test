@@ -74,8 +74,10 @@ public class Main {
 		
 		//System.out.println(lv1.one(10));
 		
-		int[][] arr  = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
-		System.out.println(lv1.minRec(arr));
+		//int[][] arr  = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
+		//System.out.println(lv1.minRec(arr));
+		
+		System.out.println(lv1.days(5, 24));
 		
 	}
 }
