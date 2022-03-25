@@ -3,8 +3,6 @@ package coding_test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
 
 public class Lv1 {
 	
@@ -454,6 +452,28 @@ public class Lv1 {
         days += (b-1);
         
         return day[days % 7];
+	 }
+	 
+	 //두개 뽑아서 더하기
+	 public int[] twoPlus(int[] numbers) {
+		 ArrayList<Integer> list = new ArrayList<>();
+		 
+		 for(int i=0; i<numbers.length; i++) {
+			 for(int j=i+1; j<numbers.length; j++) {
+				 int a = numbers[i] + numbers[j];
+				 if (list.indexOf(a) < 0){
+					 list.add(a);
+				 }
+			 }
+		 }
+		 
+		 int[] answer = new int[list.size()];
+		 
+		 for(int i=0; i<list.size(); i++) answer[i] = list.get(i);
+		 
+		 Arrays.sort(answer);
+		 
+		 return answer;
 	 }
 	
 }
