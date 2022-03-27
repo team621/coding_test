@@ -3,7 +3,6 @@ package coding_test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 public class Lv1 {
@@ -394,6 +393,107 @@ public class Lv1 {
 		 
 		 if(s.length() % 2 != 0) answer = s.substring(s.length()/2, s.length()/2+1);
 	     else answer = s.substring(s.length()/2-1, s.length()/2+1);
+		 
+		 return answer;
+	 }
+	 
+	 //부족한 금액 구하기
+	 public long coin(int price, int money, int count) {
+		 long answer = money;
+
+		 for(int i=1; i<=count; i++) {
+			 answer -= price * i;
+		 }
+		 
+		 if(answer < 0) answer *= -1;
+		 else answer = 0;
+		 
+		 return answer;
+	 }
+	 
+	 //나머지가 1이 되는 수 찾기
+	 public int one(int n) {
+		 int answer = 1;
+		 
+		 while(n % answer != 1) answer++;
+		 
+		 return answer;
+	 }
+	 
+	 //최소 직사각형
+	 public int minRec(int[][] sizes) {
+		 int row = -1;
+	        int column = -1;
+
+	        for(int i=0; i<sizes.length; i++){
+	            if(sizes[i][0] < sizes[i][1]){
+	                int temp = sizes[i][1];
+	                sizes[i][1] = sizes[i][0];
+	                sizes[i][0] = temp;
+	            }
+	        }
+
+	        for(int i=0; i<sizes.length; i++){
+	            if(row < sizes[i][0]) row = sizes[i][0];
+	            int[] tempArr = sizes[i];
+	            for(int j=1; j<tempArr.length; j++){
+	                if(column < tempArr[j]) column = tempArr[j];
+	            }
+	        }
+	        return row * column;
+	 }
+	 
+	 //2016년 요일 구하기
+	 public String days(int a, int b) {
+		int days = 0;
+        int[] month = {31,29,31,30,31,30,31,31,30,31,30,31};
+        String[] day = {"FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU"};
+        
+        for(int i=0; i<a-1; i++) days += month[i];
+        days += (b-1);
+        
+        return day[days % 7];
+	 }
+	 
+	 //두개 뽑아서 더하기
+	 public int[] twoPlus(int[] numbers) {
+		 ArrayList<Integer> list = new ArrayList<>();
+		 
+		 for(int i=0; i<numbers.length; i++) {
+			 for(int j=i+1; j<numbers.length; j++) {
+				 int a = numbers[i] + numbers[j];
+				 if (list.indexOf(a) < 0){
+					 list.add(a);
+				 }
+			 }
+		 }
+		 
+		 int[] answer = new int[list.size()];
+		 
+		 for(int i=0; i<list.size(); i++) answer[i] = list.get(i);
+		 
+		 Arrays.sort(answer);
+		 
+		 return answer;
+	 }
+	 
+	 //3진법
+	 public int samJinbub(int n) {
+		 int answer = 0;
+		 String samJinsu = "";
+		 
+		 while(n > 0) {
+			 samJinsu += Integer.toString(n % 3);
+			 n /= 3;
+		 }
+
+		 String arr[] = samJinsu.split("");
+		 List<String> list = Arrays.asList(arr);
+		 Collections.reverse(list);
+		 
+		 for(int i=0; i<list.size(); i++) {
+			 answer += Math.pow(3, i) * Integer.parseInt(list.get(i));
+		 }
 		 
 		 return answer;
 	 }

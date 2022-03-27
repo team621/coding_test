@@ -3,7 +3,7 @@ package coding_test;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("coding test");
+System.out.println("coding test");
 		
 		Lv1 lv1 = new Lv1();
 		//하샤드 test case [10=true, 11=false]
@@ -68,7 +68,21 @@ public class Main {
 		//int[] arr = {5, 9, 7, 10};
 		//System.out.println(lv1.divisor(arr, 5));
 		
-		System.out.println(lv1.middleStr("abcde"));
+		//System.out.println(lv1.middleStr("abcde"));
+		
+		//System.out.println(lv1.coin(3, 20, 4));
+		
+		//System.out.println(lv1.one(10));
+		
+		//int[][] arr  = {{60, 50}, {30, 70}, {60, 30}, {80, 40}};
+		//System.out.println(lv1.minRec(arr));
+		
+		//System.out.println(lv1.days(5, 24));
+		
+		//int[] arr = {2,1,3,4,1};
+		//System.out.println(lv1.twoPlus(arr));
+		
+		System.out.println(lv1.samJinbub(45));
 		
 	}
 }
