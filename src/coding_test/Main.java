@@ -83,6 +83,9 @@ System.out.println("coding test");
 		//System.out.println(lv1.twoPlus(arr));
 		
 		System.out.println(lv1.samJinbub(45));
+
+		int[] arr = {2,1,3,4,1};
+		System.out.println(lv1.twoPlus(arr));
 		
 	}
 }
