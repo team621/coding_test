@@ -81,6 +81,14 @@ System.out.println("coding test");
 		
 		//int[] arr = {2,1,3,4,1};
 		//System.out.println(lv1.twoPlus(arr));
+<<<<<<< HEAD
+=======
+		
+		System.out.println(lv1.samJinbub(45));
+
+		int[] arr = {2,1,3,4,1};
+		System.out.println(lv1.twoPlus(arr));
+>>>>>>> refs/remotes/origin/master
 		
 		//System.out.println(lv1.samJinbub(45));
 
