@@ -3,6 +3,7 @@ package coding_test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class Lv1 {
 	
@@ -475,5 +476,31 @@ public class Lv1 {
 		 
 		 return answer;
 	 }
+	 
+	 //3진법
+	 public int samJinbub(int n) {
+		 int answer = 0;
+		 String samJinsu = "";
+		 
+		 while(n > 0) {
+			 samJinsu += Integer.toString(n % 3);
+			 n /= 3;
+		 }
+
+		 String arr[] = samJinsu.split("");
+		 List<String> list = Arrays.asList(arr);
+		 Collections.reverse(list);
+		 
+		 for(int i=0; i<list.size(); i++) {
+			 answer += Math.pow(3, i) * Integer.parseInt(list.get(i));
+		 }
+		 
+		 return answer;
+	 }
 	
+	 //K번째 수 구하기
+	 public int[] selectK(int[] array, int[][] commands) {
+		 int[] answer = {};
+		 return answer;
+	 }
 }
