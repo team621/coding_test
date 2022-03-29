@@ -81,23 +81,16 @@ System.out.println("coding test");
 		
 		//int[] arr = {2,1,3,4,1};
 		//System.out.println(lv1.twoPlus(arr));
-<<<<<<< HEAD
-=======
-		
-		System.out.println(lv1.samJinbub(45));
+		//System.out.println(lv1.samJinbub(45));
 
-		int[] arr = {2,1,3,4,1};
-		System.out.println(lv1.twoPlus(arr));
->>>>>>> refs/remotes/origin/master
-		
 		//System.out.println(lv1.samJinbub(45));
 
 		//int[] arr = {2,1,3,4,1};
 		//System.out.println(lv1.twoPlus(arr));
 		
-		int[] arr = {1,2,6,3,7,4};
-		int[][] arr2 = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
-		
-		System.out.println(lv1.selectK(arr, arr2));
+		int[] arr = {1,2,3,4,5};
+		int[] answer = lv1.supoja(arr);
+
+		for(int i : answer) System.out.println(i + " , ");
 	}
 }

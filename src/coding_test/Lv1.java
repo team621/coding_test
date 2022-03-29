@@ -498,9 +498,56 @@ public class Lv1 {
 		 return answer;
 	 }
 	
-	 //K번째 수 구하기
-	 public int[] selectK(int[] array, int[][] commands) {
+	 //수포자
+	 public int[] supoja(int[] answers) {
 		 int[] answer = {};
+		 int[] first = {1,2,3,4,5};
+		 int[] second = {2,1,2,3,2,4,2,5};
+		 int[] third = {3,3,1,1,2,2,4,4,5,5};
+		 int count1st = 0;
+		 int count2nd = 0;
+		 int count3rd = 0;
+		 int j = 0;
+		 
+		 for(int i=0; i<answers.length; i++) {
+			 if(answers[i] == first[j]) count1st++;
+			 j++;
+			 if(j == first.length) j = 0;
+		 }
+		 j=0;
+		 
+		 for(int i=0; i<answers.length; i++) {
+			 if(answers[i] == second[j]) count2nd++;
+			 j++;
+			 if(j == second.length) j = 0;
+		 }
+		 j=0;
+		 
+		 for(int i=0; i<answers.length; i++) {
+			 if(answers[i] == third[j]) count3rd++;
+			 j++;
+			 if(j == third.length) j = 0;
+		 }
+		 
+		 ArrayList<Integer> list = new ArrayList<Integer>();
+		 
+		 list.add(count1st);
+		 if(count1st == count2nd) list.add(count2nd);
+		 else if(count1st < count2nd) {
+			 list.remove(0);
+			 list.add(count2nd);
+		 }
+		 
+		 if(list.get(0) == count3rd) list.add(count3rd);
+		 else if(list.get(0) < count3rd) {
+			 list.removeAll(list);
+			 list.add(count3rd);
+		 }
+		 
+		 answer = new int[list.size()];
+		 for(int i=0; i<list.size(); i++) answer[i] = list.get(i);
+		 
 		 return answer;
 	 }
+
 }
