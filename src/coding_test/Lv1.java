@@ -509,6 +509,7 @@ public class Lv1 {
 		 int count3rd = 0;
 		 int j = 0;
 		 
+		 //1번 학생의 점수 구하기
 		 for(int i=0; i<answers.length; i++) {
 			 if(answers[i] == first[j]) count1st++;
 			 j++;
@@ -516,6 +517,7 @@ public class Lv1 {
 		 }
 		 j=0;
 		 
+		 //2번 학생의 점수 구하기
 		 for(int i=0; i<answers.length; i++) {
 			 if(answers[i] == second[j]) count2nd++;
 			 j++;
@@ -523,6 +525,7 @@ public class Lv1 {
 		 }
 		 j=0;
 		 
+		 //3번 학생의 점수 구하기
 		 for(int i=0; i<answers.length; i++) {
 			 if(answers[i] == third[j]) count3rd++;
 			 j++;
@@ -530,22 +533,36 @@ public class Lv1 {
 		 }
 		 
 		 ArrayList<Integer> list = new ArrayList<Integer>();
+		 ArrayList<Integer> listAnswer = new ArrayList<Integer>();
 		 
 		 list.add(count1st);
-		 if(count1st == count2nd) list.add(count2nd);
+		 listAnswer.add(1);
+		 
+		 if(count1st == count2nd) {
+			 list.add(count2nd);
+			 listAnswer.add(2);
+		 }
 		 else if(count1st < count2nd) {
 			 list.remove(0);
+			 listAnswer.remove(0);
 			 list.add(count2nd);
+			 listAnswer.add(2);
 		 }
 		 
-		 if(list.get(0) == count3rd) list.add(count3rd);
+		 if(list.get(0) == count3rd) {
+			 list.add(count3rd);
+			 listAnswer.add(3);
+		 }
 		 else if(list.get(0) < count3rd) {
 			 list.removeAll(list);
+			 listAnswer.removeAll(listAnswer);
 			 list.add(count3rd);
+			 listAnswer.add(3);
 		 }
 		 
-		 answer = new int[list.size()];
-		 for(int i=0; i<list.size(); i++) answer[i] = list.get(i);
+		 answer = new int[listAnswer.size()];
+		 
+		 for(int i=0; i<listAnswer.size(); i++) answer[i] = listAnswer.get(i);
 		 
 		 return answer;
 	 }
